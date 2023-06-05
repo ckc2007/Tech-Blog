@@ -4,34 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Blob</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-pzjw8u2+ua9nq5Gki0R5PXPkQNlHCQp9S+K7ihK3vhKLp2x3u7WqIy2t7WfPTk5B"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="/css/jass.css" />
     <link rel="stylesheet" href="/css/style.css" />
+
   </head>
 
   <body>
-    <div class="flex-column justify-space-around">
-      <header class="display-flex align-center p-2">
-        <img src="/images/The-Tech-Blob.jpg" alt="The Tech Blob!" width="200" height="200" />
-        <a href="/"><h1>The Tech Blob</h1></a>
+    <div class="d-flex flex-column justify-content-between min-vh-100">
+      <header class="p-2 bg-light">
+        <div class="d-flex align-items-center">
+          <img
+            src="/images/The-Tech-Blob.jpg"
+            alt="The Tech Blob!"
+            width="200"
+            height="200"
+          />
+          <a href="/" class="ml-2"><h1 class="mb-0">The Tech Blob</h1></a>
+        </div>
       </header>
-      <navs>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-          <a href="/">Home</a>
-          <a href="/profile">Profile</a>
-          <button class="no-button" id="logout">logout</button>
-        {{else}}
-          <a href="/">Home</a>
-          <a href="/login">Profile</a>
-          <a href="/login">login</a>
-        {{/if}}
+      <nav class="navbar navbar-expand navbar-light bg-light">
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+            {{#if logged_in}}
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/profile">Profile</a>
+              </li>
+            {{else}}
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+            {{/if}}
+          </ul>
+          {{#if logged_in}}
+            <button class="btn btn-primary" id="logout">Logout</button>
+          {{/if}}
+        </div>
       </nav>
-
-      <main class="container container-fluid mt-5">
+      <main class="container-fluid mt-5">
         <!-- Render the sub layout -->
         {{{body}}}
       </main>
-      <footer>
+      <footer class="p-2 bg-light">
 
       </footer>
     </div>

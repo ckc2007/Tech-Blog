@@ -1,5 +1,12 @@
-header, .post:not(:last-child) {
+header,
+.post:not(:last-child) {
   border-bottom: 1px solid #ccc;
+}
+
+#logout:hover {
+  background-color: magenta;
+  transform: scale(1.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .no-button {
@@ -17,8 +24,17 @@ header, .post:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+/* Custom CSS */
+body {
+  background-color: #ebebeb;
+}
+.navbar {
+  background-color: #f8b500;
+}
+.navbar .nav-link {
+  color: #0056ce;
+}
+
+h1 {
+  color: #006aff;
 }
