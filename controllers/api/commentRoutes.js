@@ -11,7 +11,7 @@ router.post("/", withAuth, async (req, res) => {
     const commentData = await Comment.create({
       comments: text,
       user_id: userId,
-      story_id: postId,
+      post_id: postId,
     });
 
     res.status(200).json({ message: "Comment created successfully" });
