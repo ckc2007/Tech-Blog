@@ -3,8 +3,19 @@ header,
   border-bottom: 1px solid #ccc;
 }
 
+.nav-link {
+  font-size: 30px; /* Increase the font size as desired */
+  margin-right: 20px; /* Adjust the spacing between links */
+}
+
 #logout:hover {
   background-color: magenta;
+  transform: scale(1.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#create:hover {
+  background-color: #00ff15;
   transform: scale(1.1);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -22,19 +33,4 @@ header,
 .no-button:hover {
   color: #065b83;
   text-decoration: underline;
-}
-
-/* Custom CSS */
-body {
-  background-color: #ebebeb;
-}
-.navbar {
-  background-color: #f8b500;
-}
-.navbar .nav-link {
-  color: #0056ce;
-}
-
-h1 {
-  color: #006aff;
 }
