@@ -1,8 +1,10 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div>
+<link rel="stylesheet" href="../public/css/style.css" />
+{{#if logged_in}}
+  <div class="text-center">
+    <h2>{{name}}</h2>
+    <p>{{description}}</p>
+    <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  </div>
+{{else}}
+  <a href="/login"></a>
+{{/if}}
