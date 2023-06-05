@@ -5,24 +5,22 @@
     <p>Created by {{user.name}} on {{format_date date_created}}</p>
     <p>{{{comment.description}}}</p>
   </div>
-  <div class="comment-container">
-    <div class="w-full bg-white rounded-lg border p-2 my-4 mx-6">
+  <div class="comment-container mx-auto max-w-2xl">
+    <div class="w-full bg-white rounded-lg border p-2 my-4">
 
       <h5 class="font-bold mb-4">Discussion:</h5>
 
       {{#each comments}}
-        <div class="flex flex-col border rounded-md p-3 ml-3 my-3">
-          <div class="flex gap-3 items-center">
-            <h6 class="font-bold">
-              {{this.user.name}}
-            </h6>
-          </div>
-          <p class="text-gray-600 mt-2">
+        <div class="flex items-center border rounded-md p-2 mb-2">
+          <h6 class="font-bold">
+            {{this.user.name}}
+          </h6>
+          <p class="text-gray-600 ml-2">
             {{this.comments}}
           </p>
           <button
             data-id="{{this.id}}"
-            class="text-red-500 mt-2 text-sm px-2 py-1 rounded-md delete-comments"
+            class="text-red-500 ml-auto text-sm px-2 py-1 rounded-sm delete-comments"
             id="delcomment"
           >delete</button>
         </div>
@@ -54,5 +52,6 @@
 {{else}}
   <a href="/login">Login to view the blob</a>
 {{/if}}
+
 
 <script src="/js/comment.js"></script>
