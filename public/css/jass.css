@@ -985,7 +985,9 @@ a:hover {
 }
 
 .btn:hover {
-  background-color: #cecece;
+  background-color: #6aff97;
+  transform: scale(1.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn.btn-squared {
