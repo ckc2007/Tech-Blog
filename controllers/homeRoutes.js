@@ -70,7 +70,7 @@ router.get("/posts/:id", async (req, res) => {
 
     const commentsData = await Comment.findAll({
       where: {
-        story_id: req.params.id,
+        post_id: req.params.id,
       },
       include: [
         {
