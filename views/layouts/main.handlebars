@@ -18,13 +18,19 @@
             alt="The Tech Blob!"
             width="200"
             height="200"
+            style="display: inline-block;"
           />
-          <a href="/" class="ml-2"><h1 class="mb-0">The Tech Blob</h1></a>
+          <a href="/" class="ml-2" style="display: inline-block;"><h1
+              class="mb-0"
+            >The Tech Blob</h1></a>
         </div>
       </header>
       <nav class="navbar navbar-expand navbar-light bg-light">
         <div class="collapse navbar-collapse">
-          <ul class="navbar-nav mr-auto">
+          <ul
+            class="navbar-nav mr-auto"
+            style="display: flex; list-style: none;"
+          >
             {{#if logged_in}}
               <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
@@ -49,6 +55,7 @@
           {{/if}}
         </div>
       </nav>
+
       <main class="container-fluid mt-5">
         <!-- Render the sub layout -->
         {{{body}}}
